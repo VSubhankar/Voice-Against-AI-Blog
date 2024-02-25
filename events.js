@@ -14,5 +14,14 @@ function scrollDown() {
         behavior: 'smooth' // Smooth scrolling animation
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+    var searchButton = document.getElementById('searchButton');
+
+    searchButton.addEventListener('click', function() {
+        alert('This feature will be available soon!');
+    });
+});
+
+
 
 

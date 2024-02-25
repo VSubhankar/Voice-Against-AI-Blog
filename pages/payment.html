@@ -9,58 +9,58 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">
-            <img id="logo" src="https://blogger.googleusercontent.com/img/a/AVvXsEicHFze5YjsfcgvzNHA5NMW28o0icymzKaguA2T6zPNBZP3N0HqWqv6_A2GbeYtsCTL96vg7-niK_aSoLJV70g3A5MP5rzqDNbk7eSiTqcJ8R_LJEdIDlPV4aGPZIzJ8R3x9aWK9vNE3I19Hz4QZb9jfVbUXQxQA9xIxaJfphXEPvlPD_TiR0DZARZL=s97"
-                alt="Logo" draggable="false" height="50" />
-        </a>
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="./pages/comment.html">Comment</a></li>
-                        <li><a class="dropdown-item" href="./pages/about_us.html">Know More</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <form class="d-flex align-items-center flex-grow-1 p-4">
-                <div class="input-group">
-                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-light" type="button">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </form>
-
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-size: large;">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/about_us.html" style="font-size: large;">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/support.html" style="font-size: large;">Support Us</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="#">
+                <img id="logo" src="https://blogger.googleusercontent.com/img/a/AVvXsEicHFze5YjsfcgvzNHA5NMW28o0icymzKaguA2T6zPNBZP3N0HqWqv6_A2GbeYtsCTL96vg7-niK_aSoLJV70g3A5MP5rzqDNbk7eSiTqcJ8R_LJEdIDlPV4aGPZIzJ8R3x9aWK9vNE3I19Hz4QZb9jfVbUXQxQA9xIxaJfphXEPvlPD_TiR0DZARZL=s97"
+                    alt="Logo" draggable="false" height="50" />
+            </a>
+    
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./about_us.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="./know_more.html">Know More</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <form class="d-flex align-items-center flex-grow-1 p-4">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-light" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+    
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" style="font-size: large;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./comment.html" style="font-size: large;">Comment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./support.html" style="font-size: large;">Support Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
   <div class="pcontainer">
     <h2>Payment Details</h2>
     <form>
@@ -88,5 +88,13 @@
       <input type="submit" value="Make Payment">
     </form>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var searchButton = document.getElementById('searchButton');
+        searchButton.addEventListener('click', function() {
+            alert('This feature will be available soon!');
+        });
+    });
+    </script>
 </body>
 </html>
