@@ -77,39 +77,6 @@
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    function addComment() {
-        var nameInput = document.getElementById('nameInput');
-        var commentInput = document.getElementById('commentInput');
-        var nameText = nameInput.value;
-        var commentText = commentInput.value;
-
-        if (nameText.trim() === '' || commentText.trim() === '') {
-            alert('Please enter both your name and a comment.');
-            return;
-        }
-
-        var commentsContainer = document.getElementById('comments');
-
-        var li = document.createElement('li');
-        li.className = 'list-group-item comment';
-        li.appendChild(document.createTextNode(`${nameText}: ${commentText}`));
-
-        commentsContainer.appendChild(li);
-
-        nameInput.value = '';
-        commentInput.value = '';
-    }
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var searchButton = document.getElementById('searchButton');
-        searchButton.addEventListener('click', function() {
-            alert('This feature will be available soon!');
-        });
-    });
-    </script>
-
+<script src="./comment_script.js"></script>
 </body>
 </html>
