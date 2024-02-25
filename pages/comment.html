@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOICE_AGAINST_AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+            <img id="logo" src="https://blogger.googleusercontent.com/img/a/AVvXsEicHFze5YjsfcgvzNHA5NMW28o0icymzKaguA2T6zPNBZP3N0HqWqv6_A2GbeYtsCTL96vg7-niK_aSoLJV70g3A5MP5rzqDNbk7eSiTqcJ8R_LJEdIDlPV4aGPZIzJ8R3x9aWK9vNE3I19Hz4QZb9jfVbUXQxQA9xIxaJfphXEPvlPD_TiR0DZARZL=s97"
+                alt="Logo" draggable="false" height="50" />
+        </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./pages/comment.html">Comment</a></li>
+                        <li><a class="dropdown-item" href="./pages/about_us.html">Know More</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="d-flex align-items-center flex-grow-1 p-4">
+                <div class="input-group">
+                    <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="font-size: large;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/about_us.html" style="font-size: large;">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/support.html" style="font-size: large;">Support Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="commentContainer">
+    <div id="commentInputContainer">
+        <h2 class="mt-4 mb-4">Add Comment</h2>
+        <input type="text" id="nameInput" class="form-control mb-3" placeholder="Your Name">
+        <input type="text" id="commentInput" class="form-control mb-3" placeholder="Add your comment...">
+        <button id="addCommentBtn" class="btn btn-primary" onclick="addComment()">Add Comment</button>
+    </div>
+    <div id="commentsCard">
+        <h2 class="mb-4">Past Comments</h2>
+        <ul id="comments" class="list-group"></ul>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function addComment() {
+        var nameInput = document.getElementById('nameInput');
+        var commentInput = document.getElementById('commentInput');
+        var nameText = nameInput.value;
+        var commentText = commentInput.value;
+
+        if (nameText.trim() === '' || commentText.trim() === '') {
+            alert('Please enter both your name and a comment.');
+            return;
+        }
+
+        var commentsContainer = document.getElementById('comments');
+
+        var li = document.createElement('li');
+        li.className = 'list-group-item comment';
+        li.appendChild(document.createTextNode(`${nameText}: ${commentText}`));
+
+        commentsContainer.appendChild(li);
+
+        nameInput.value = '';
+        commentInput.value = '';
+    }
+</script>
+
+</body>
+</html>

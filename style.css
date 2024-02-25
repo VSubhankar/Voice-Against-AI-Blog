@@ -1,0 +1,217 @@
+.navbar-dark .nav-item .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(226, 255, 5, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+    color: #fff;
+  }
+  
+  .fa-li {
+    position: relative;
+    left: 0;
+  }
+.navbar-brand{
+    border-radius: 5px;
+}
+/* Navbar styling remains the same */
+
+
+.waves {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+  /* Additional styles as needed */
+}
+
+
+
+/* Waves Animation */
+
+.parallax > use {
+animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+animation-delay: -2s;
+animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+animation-delay: -3s;
+animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+animation-delay: -4s;
+animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+animation-delay: -5s;
+animation-duration: 20s;
+}
+@keyframes move-forever {
+0% {
+ transform: translate3d(-90px,0,0);
+}
+100% { 
+  transform: translate3d(85px,0,0);
+}
+}
+
+
+
+/* Content styles */
+.content {
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  margin-top: 20px; /* Adjust margin as needed */
+  border-radius: 10px; /* Add rounded corners for aesthetics */
+}
+
+/* Shrinking for mobile */
+@media (max-width: 768px) {
+  .waves {
+      height: 40px;
+      min-height: 40px;
+  }
+  .content {
+      height: auto; /* Allow content to naturally expand */
+      margin-top: 10px; /* Adjust margin as needed */
+  }
+  h1 {
+      font-size: 24px;
+  }
+}
+
+
+/* Body styling */
+body {
+  background: rgb(192, 46, 209);
+  background: linear-gradient(90deg, rgba(192, 46, 209, 1) 0%, rgba(108, 139, 247, 1) 100%);
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: #333333;
+  min-height: 100vh; /* Ensure body covers the entire viewport height */
+}
+.main-body{
+  padding-top: 10%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #333; /* Example background color */
+  color: #fff; /* Example text color */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Main heading container styling */
+.main-heading {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 70%;
+  margin: 10px auto; /* Center the container horizontally and provide space */
+  padding: 20px;
+}
+.main-heading-sub{
+  display: flex;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Impact', sans-serif;
+  margin: 0; /* Remove default margin */
+}
+p{
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Image container styling */
+.img-container-main {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto; /* Center the container horizontally and provide space */
+  gap: 20px; /* Space between image items */
+  width: 80%;
+}
+#imgh1{
+  width: 100px;
+  margin-left: 20px;
+  height:100px;
+  display: inline;
+}
+#imgmain1, #imgmain2{
+  width: 30%;
+  height: 200px;
+}
+/* scroll BTn */
+.scroll-down-button {
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
+  animation: moveUpDown 1s infinite alternate;
+  width: fit-content;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.card-container {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  background-color: rgb(225, 236, 101);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+
+.card-image img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-description {
+  margin-top: 10px;
+  text-align: center;
+  height: 350px;
+}
+
+
+.card-image{
+  margin: 0px auto;
+}
+
+.card-image img {
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 80px;
+}
+
