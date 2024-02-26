@@ -23,7 +23,7 @@
 
         nameInput.value = '';
         commentInput.value = '';
-        appendToCommentsFile(formattedComment);
+        // appendToCommentsFile(formattedComment);
     }
     document.addEventListener('DOMContentLoaded', function() {
         var searchButton = document.getElementById('searchButton');
@@ -33,25 +33,25 @@
     });
 
 
-    function appendToCommentsFile(comment) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'comments.php', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    // function appendToCommentsFile(comment) {
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open('POST', 'comments.php', true);
+    //     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     
-        // Send the comment data as a POST request
-        xhr.send('comment=' + encodeURIComponent(comment));
+    //     // Send the comment data as a POST request
+    //     xhr.send('comment=' + encodeURIComponent(comment));
     
-        // Listen for the response from the server
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                if (xhr.status === 200) {
-                    // Success: Do something if needed
-                    console.log('Comment added successfully!');
-                } else {
-                    // Error: Handle the error if needed
-                    console.error('Error adding comment: ' + xhr.statusText);
-                }
-            }
-        };
-    }
+    //     // Listen for the response from the server
+    //     xhr.onreadystatechange = function() {
+    //         if (xhr.readyState === XMLHttpRequest.DONE) {
+    //             if (xhr.status === 200) {
+    //                 // Success: Do something if needed
+    //                 console.log('Comment added successfully!');
+    //             } else {
+    //                 // Error: Handle the error if needed
+    //                 console.error('Error adding comment: ' + xhr.statusText);
+    //             }
+    //         }
+    //     };
+    // }
     
