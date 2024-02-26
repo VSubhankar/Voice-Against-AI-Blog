@@ -16,7 +16,7 @@
 .navbar-brand{
     border-radius: 5px;
 }
-/* Navbar styling remains the same */
+
 
 
 .waves {
@@ -27,7 +27,7 @@
   height: 15vh;
   min-height: 100px;
   max-height: 150px;
-  /* Additional styles as needed */
+
 }
 
 
@@ -69,25 +69,9 @@ animation-duration: 20s;
   text-align: center;
   background-color: white;
   padding: 10px;
-  margin-top: 20px; /* Adjust margin as needed */
-  border-radius: 10px; /* Add rounded corners for aesthetics */
+  margin-top: 20px;
+  border-radius: 10px;
 }
-
-/* Shrinking for mobile */
-@media (max-width: 768px) {
-  .waves {
-      height: 40px;
-      min-height: 40px;
-  }
-  .content {
-      height: auto; /* Allow content to naturally expand */
-      margin-top: 10px; /* Adjust margin as needed */
-  }
-  h1 {
-      font-size: 24px;
-  }
-}
-
 
 /* Body styling */
 body {
@@ -185,12 +169,21 @@ p{
 
 .card {
   width: 300px;
-  background-color: rgb(225, 236, 101);
+  background-color: #c6d456;
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
   padding: 10px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  color: #000000;
   
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust as needed */
 }
 
 .card-image img:hover {
@@ -215,3 +208,91 @@ p{
   border-radius: 80px;
 }
 
+/* Navbar */
+.navbar-collapse {
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  flex-direction: column;
+  padding-top: 20px; /* Adjust as needed */
+}
+
+.navbar-toggler {
+  order: -1;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  padding: 10px; /* Adjust as needed */
+}
+
+/* Main heading */
+.main-heading-sub {
+  text-align: center;
+}
+
+/* Image container */
+.img-container-main {
+  text-align: center;
+}
+
+/* Scroll down button */
+.scroll-down-button {
+  margin-top: 20px; /* Adjust as needed */
+}
+
+/* Waves */
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  z-index: -1;
+}
+
+/* Main body section */
+#main-body-2 {
+  padding: 20px; /* Adjust as needed */
+}
+@media (max-width: 768px) {
+  .main-heading{
+    margin-top: 10%;
+  }
+  .main-heading  h4{
+    font-size: medium;
+  }
+  .waves {
+      height: 40px;
+      min-height: 40px;
+  }
+  .content {
+      height: auto;
+      margin-top: 10px;
+  }
+  h1 {
+      font-size: 24px;
+  }
+
+  #imgmain1,
+  #imgmain2 {
+      height: 180px;
+      width: 40%; /* Set the width to 100% so they stack vertically */
+      margin-bottom: 20px; /* Add some space between the images */
+  }
+  .scroll-down-button img{
+    height: 80px;
+    width: 80px;
+  }
+  .waves{
+    height: max-content;
+  }
+  .main-heading{
+    margin-top: 100px;
+  }
+}
