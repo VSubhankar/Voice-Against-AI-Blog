@@ -281,7 +281,7 @@ p{
 
   #imgmain1,
   #imgmain2 {
-      height: 180px;
+      height: 160px;
       width: 40%; /* Set the width to 100% so they stack vertically */
       margin-bottom: 20px; /* Add some space between the images */
   }
