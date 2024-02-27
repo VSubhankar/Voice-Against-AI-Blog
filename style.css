@@ -27,6 +27,7 @@
   height: 15vh;
   min-height: 100px;
   max-height: 150px;
+  margin-bottom: 10px;
 
 }
 
@@ -91,6 +92,15 @@ body {
   gap: 10px;
   flex-direction: column;
 }
+.main-heading h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+}
+
+.main-heading h4{  
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
 /* Navbar styling */
 .navbar {
@@ -109,9 +119,6 @@ body {
   width: 70%;
   margin: 10px auto; /* Center the container horizontally and provide space */
   padding: 20px;
-}
-.main-heading-sub{
-  display: flex;
 }
 
 h1 {
@@ -151,6 +158,13 @@ p{
   width: fit-content;
 }
 
+.main-heading-sub{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
@@ -169,21 +183,25 @@ p{
 
 .card {
   width: 300px;
-  background-color: #c6d456;
-  display: flex;
+  background: #e65c00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
   padding: 10px;
   flex: 1 1 300px;
-  max-width: 300px;
   color: #000000;
-  
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Adjust as needed */
+}
+.card-container :hover{
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .card-image img:hover {
@@ -297,5 +315,15 @@ p{
   }
   .main-heading{
     margin-top: 100px;
+  }
+  .card{
+    width: 100%;
+    flex-direction: column;
+  }
+  .card-container{
+    width: fit-content;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 0%;
   }
 }
